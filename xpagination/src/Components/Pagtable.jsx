@@ -14,17 +14,17 @@ export default function Pagtable() {
   const membersPart = members.slice(indexFirst, indexLast);
   const totalPage = Math.ceil(members.length / itemsPerPage);
 
-  const handlePrevious = () => {
-    if (currentPage > 1) {
-      setCurrentPage((prevPage) => Math.max(prevPage - 1, 1)); // Ensure it doesn't go below 1
-    }
-  };
-  
-  const handleNext = () => {
-    if (currentPage < totalPage) {
-      setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPage)); // Ensure it doesn't go past totalPage
-    }
-  };
+const handleNext = () => {
+  if (currentPage < totalPage) {
+    setCurrentPage((prevPage) => prevPage + 1);
+  }
+};
+
+const handlePrevious = () => {
+  if (currentPage > 1) {
+    setCurrentPage((prevPage) => prevPage - 1);
+  }
+};
 
   // Fetch data from API
   useEffect(() => {
@@ -84,7 +84,6 @@ export default function Pagtable() {
       <button
         onClick={handlePrevious}
         disabled={currentPage === 1}
-        className={`prev ${currentPage === 1 ? "disabled" : ""}`}
       >
         Previous
       </button>
@@ -94,7 +93,6 @@ export default function Pagtable() {
       <button
         onClick={handleNext}
         disabled={currentPage === totalPage}
-        className={`next ${currentPage === totalPage ? "disabled" : ""}`}
       >
         Next
       </button>
