@@ -51,7 +51,7 @@ export default function Pagtable() {
 
   // Handle case when error occurs
   if (error) {
-    return <div className="error">Failed to fetch data: {error.message}</div>;
+    return alert("Failed to fetch data");
   }
 
   return (
