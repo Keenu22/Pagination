@@ -1,0 +1,37 @@
+.layout{
+  width:100%;
+  border:3px solid green;
+}
+.heading{
+  background-color: green;
+  color:white;
+}
+.border-row td {
+  border-bottom: 1px solid #000;
+  /* Adds a solid black border to each cell */
+}
+.prev {
+  background-color: green;
+  border-radius:4px;
+  border:none;
+  color:white;
+  padding:4px;
+  margin-right:7px;
+  margin-top: 2px;
+}
+.next{
+  background-color: green;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  padding: 4px;
+  margin-left: 7px;
+  margin-top:2px;
+}
+.pageClr{
+  background-color: green;
+  color:white;
+  border-radius:4px;
+  padding:3px;
+  margin-top: 4px;
+}
