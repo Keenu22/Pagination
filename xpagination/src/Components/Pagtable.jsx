@@ -83,7 +83,6 @@ const handlePrevious = () => {
       )}
       <button
         onClick={handlePrevious}
-        disabled={currentPage === 1}
       >
         Previous
       </button>
@@ -92,8 +91,7 @@ const handlePrevious = () => {
       </span>
       <button
         onClick={handleNext}
-        disabled={currentPage === totalPage}
-      >
+        >
         Next
       </button>
     </div>
